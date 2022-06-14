@@ -3,9 +3,9 @@
 
 import 'package:flutter/material.dart';
 
-class ListViewScreen extends StatelessWidget {
+class ListView2Screen extends StatelessWidget {
    
-  const ListViewScreen({Key? key}) : super(key: key);
+  const ListView2Screen({Key? key}) : super(key: key);
   final fruits = const ["Apple", "Banana", "Orange", "Pineapple", "Watermelon", "Strawberry"];
   
   @override
@@ -14,28 +14,26 @@ class ListViewScreen extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text("ListView Screen Type 1")
+        title: const Text("ListView Screen Type 2"),
+        elevation: 4,
+        backgroundColor: Colors.pink[400],
       ),
-      body: ListView(
-        children: [
-
-          ...fruits.map(
-            (fruit) =>  ListTile(
-             leading: const Icon(Icons.access_time),
-             title: Text(fruit)
-           ) 
-          ).toList()
-
-          // Text('Hello World!'),
-          // Text('Hello World!'),
-          // Text('Hello World!'),
-          // Text('Hello World!'),
-          // Text('Hello World!')
-          // ListTile(
-          //   leading: Icon(Icons.access_time),
-          //   title: Text('Hello world')
-          // )
-        ],
+      body: ListView.separated(
+        // itemBuilder: (context, index) => Text(fruits[index]),
+        itemBuilder: (context, index) => 
+          ListTile(
+             trailing: const Icon(
+              Icons.arrow_forward_ios_outlined,
+              color: Colors.pink,
+              ),
+             title: Text(fruits[index]),
+             onTap: () {
+              final fruit = fruits[index];
+              print(fruit);
+             },
+           ), 
+        separatorBuilder: (context, index) => const Divider(), 
+        itemCount: fruits.length
       )
     );
   }
