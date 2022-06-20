@@ -18,13 +18,20 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Material App',
       //home: const ListView2Screen(),
-      initialRoute: 'home',
+      initialRoute: 'alert',
       routes: {
         'home': (BuildContext context) => const HomeScreen(),
         'listview1': (BuildContext context) => const ListViewScreen(),
         'listview2': (BuildContext context) => const ListView2Screen(),
         'alert': (BuildContext context) => const AlertScreen(),
         'card': (BuildContext conext) => const CardScreen()
+      },
+      onGenerateRoute: (routeSettings) {
+        print(routeSettings);
+
+        return MaterialPageRoute(
+          builder: (context) => const AlertScreen()
+        );
       },
     );
   }
