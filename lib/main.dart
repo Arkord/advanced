@@ -1,12 +1,5 @@
-import 'package:advanced/router/app_routes.dart';
-import 'package:advanced/screens/home_screen.dart';
 import 'package:flutter/material.dart';
-
-import 'package:advanced/screens/alert_screen.dart';
-import 'package:advanced/screens/card_screen.dart';
-import 'package:advanced/screens/listview_screen.dart';
-import 'package:advanced/screens/listview_screen_1.dart';
-
+import 'package:advanced/router/app_routes.dart';
 
 void main() => runApp(const MyApp());
 
