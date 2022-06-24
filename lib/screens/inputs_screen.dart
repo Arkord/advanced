@@ -6,8 +6,11 @@ class InputsScreen extends StatelessWidget {
   
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: Center(
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text("Inputs Screen"),
+      ),
+      body: const Center(
          child: Text('InputsScreen'),
       ),
     );

@@ -9,13 +9,11 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          backgroundColor: Colors.pink,
-          title: const Text("Flutter Advanced Design"),
-          elevation: 0,
+          title: const Text("Flutter Advanced Design")
         ),
         body: ListView.separated(
             itemBuilder: (context, index) => ListTile(
-                  leading: Icon(menuOptions[index].icon, color: Colors.pink,),
+                  leading: Icon(menuOptions[index].icon, color: Theme.of(context).primaryColor),
                   title: Text(menuOptions[index].name),
                   onTap: () {
                     // final route = MaterialPageRoute(builder: (context) => const ListView2Screen());

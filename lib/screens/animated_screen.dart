@@ -6,8 +6,11 @@ class AnimatedScreen extends StatelessWidget {
   
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: Center(
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text("Animated Screen"),
+      ),
+      body: const Center(
          child: Text('AnimatedScreen'),
       ),
     );
